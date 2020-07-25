@@ -14,3 +14,17 @@ function taskPhpCgi()
             print_r('Page not found. <a href="/">main</a>');
     }
 }
+
+function htmlInPhp()
+{
+    // in task we need to add <?php
+    $links = [
+       ['url' => 'https://google.com', 'name' => 'Google'],
+        ['url' => 'https://yandex.com', 'name' => 'Yandex'],
+        ['url' => 'https://bingo.com', 'name' => 'Bingo']
+    ];
+    foreach ($links as $link)
+    {
+        print_r("<div><a href={$link['url']}>{$link['name']}</a></div> \n");
+    }
+}
