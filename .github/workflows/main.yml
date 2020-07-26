@@ -1,0 +1,25 @@
+name: PHP CI
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  build:
+
+    # указываем среду
+    runs-on: ubuntu-latest
+
+    steps:
+      # Для того что бы следующие команды работали с корнем проекта
+      - name: Git clone
+        uses: actions/checkout@v2
+
+      # Развернем проект
+      - name: Make install
+        run: |
+          make install
+      # Запускаем линтер
+      - name: make test
+        run: |
+          make lint

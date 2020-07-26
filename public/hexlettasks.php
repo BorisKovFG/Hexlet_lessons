@@ -27,8 +27,7 @@ function htmlInPhp()
         ['url' => 'https://yandex.com', 'name' => 'Yandex'],
         ['url' => 'https://bingo.com', 'name' => 'Bingo']
     ];
-    foreach ($links as $link)
-    {
+    foreach ($links as $link) {
         print_r("<div><a href={$link['url']}>{$link['name']}</a></div> \n");
     }
 }
@@ -75,5 +74,4 @@ function requestHandler()
         return $response->write(json_encode($domains));
     });
     $app3->run();
-
 }
