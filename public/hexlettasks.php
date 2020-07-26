@@ -1,6 +1,10 @@
 <?php
 
+// phpcs:disable
+
 require __DIR__ . '/../vendor/autoload.php';
+// phpcs:enable
+
 
 use Slim\Factory\AppFactory;
 
